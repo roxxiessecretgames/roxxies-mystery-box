@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'nonce-roxxieStyle2026'; script-src 'nonce-roxxieScript2026'; img-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<title>Roxxie's Mystery Box 🎀</title>
+<style nonce="roxxieStyle2026">
+:root{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#6c2550;background:#fff2f9}*{box-sizing:border-box}body{margin:0;min-height:100svh;background:radial-gradient(circle at 10% 8%,#fff 0 2%,transparent 22%),radial-gradient(circle at 92% 20%,#ffd2e8,transparent 32%),linear-gradient(155deg,#fff6fb,#ffe0ef 65%,#fff2fa);display:grid;place-items:center;padding:24px 14px}.wrap{width:min(100%,520px);text-align:center}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.19em;color:#b34b82}.panel{border:2px solid #fff;border-radius:32px;padding:28px 17px 22px;background:rgba(255,255,255,.76);box-shadow:0 20px 60px #c66c9d33,0 0 0 1px #f5c0da;backdrop-filter:blur(8px)}.bow{font-size:3rem;filter:drop-shadow(0 5px 3px #ff9dcc)}h1{font-size:clamp(2rem,7vw,3.1rem);line-height:1.04;margin:8px 0 10px;letter-spacing:-.05em;color:#a42d70;text-shadow:1px 2px #fff}.lead{line-height:1.55;margin:0 auto 20px;max-width:370px;color:#8a4c71}.mini{display:inline-block;padding:7px 13px;border-radius:999px;background:#ffe0ef;color:#a33170;font-size:.75rem;font-weight:800;letter-spacing:.04em;margin-bottom:18px}.envelopes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:4px 0 20px}.envelope{position:relative;aspect-ratio:1/.95;border:2px solid #fff;border-radius:19px;background:linear-gradient(150deg,#ffb9dc,#ff79b5);box-shadow:0 8px 0 #d965a2,0 13px 22px #e872ae55;cursor:pointer;transition:transform .2s,filter .2s;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0}.envelope:before{content:"";position:absolute;top:0;left:0;right:0;height:53%;background:linear-gradient(160deg,#ffd6e9,#ff94c3);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:17px 17px 0 0}.envelope:hover,.envelope:focus-visible{transform:translateY(-5px);filter:saturate(1.1)}.envelope:focus-visible{outline:3px solid #8d2b67;outline-offset:4px}.envelope:disabled{cursor:default;opacity:.52;transform:none}.seal{position:relative;z-index:1;font-size:2.1rem;text-shadow:0 2px 3px #aa4b81}.envelope span:last-child{position:relative;z-index:1;font-size:.76rem;font-weight:800}.note{font-size:.78rem;color:#946581;line-height:1.6;margin:15px 0 0}.result{display:none;margin-top:18px;padding:19px 14px;border-radius:23px;border:2px dashed #f49ac6;background:#fff8fc;animation:appear .35s ease-out}.result.show{display:block}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.result h2{font-size:1.2rem;margin:4px 0;color:#9b2a69}.price{font-size:2.5rem;font-weight:900;color:#d13f8d;letter-spacing:-.04em;margin:5px}.result p{font-size:.85rem;line-height:1.5}.actions{display:flex;flex-direction:column;gap:10px;margin-top:16px}.action{border:0;border-radius:14px;padding:14px 12px;font-weight:800;font-size:.92rem;text-decoration:none;cursor:pointer;background:#c82d82;color:white;box-shadow:0 5px 0 #9c1f61}.action.secondary{background:#ffe1f0;color:#963366;box-shadow:none}.action:focus-visible{outline:3px solid #722350;outline-offset:3px}.footer{font-size:.7rem;color:#a2708d;margin:20px 0 0;line-height:1.6}.stars{font-size:1.1rem;letter-spacing:.3em}.status{font-size:.8rem;color:#6f3558;min-height:1.3em}@media(prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap"><div class="panel">
+<div class="eyebrow">A LITTLE SECRET JUST FOR YOU</div>
+<div class="bow" aria-hidden="true">🎀</div>
+<h1>ROXXIE'S<br>MYSTERY BOX</h1>
+<p class="lead">Pssst… tengo un regalito secreto para ti. 💌 Elige uno de mis tres sobres y descubre tu precio especial para entrar a mi diario.</p>
+<div class="mini">♡ ELIGE SOLO UN SOBRE ♡</div>
+<div class="envelopes" id="envelopes">
+<button class="envelope" type="button" data-envelope="0" aria-label="Abrir sobre rosa número 1"><span class="seal">💗</span><span>SOBRE 01</span></button>
+<button class="envelope" type="button" data-envelope="1" aria-label="Abrir sobre rosa número 2"><span class="seal">🎀</span><span>SOBRE 02</span></button>
+<button class="envelope" type="button" data-envelope="2" aria-label="Abrir sobre rosa número 3"><span class="seal">💌</span><span>SOBRE 03</span></button>
+</div>
+<div class="stars" aria-hidden="true">✦ ♡ ✦</div>
+<div id="result" class="result" aria-live="polite">
+<div aria-hidden="true">🎉 💖 🎉</div><h2>¡Tu sorpresa está aquí!</h2>
+<div class="price" id="price"></div>
+<p>Precio especial de acceso a <strong>DIARIO DE ROXXIE</strong> 🎀<br>Pago único · MXN</p>
+<p id="promoDescription"></p>
+<div class="actions"><button id="copy" class="action" type="button">💌 Copiar mi premio</button><a class="action secondary" href="https://t.me/RoxxxieDoll" target="_blank" rel="noopener noreferrer">🎀 Hablar con Roxxie en Telegram</a></div>
+<p class="status" id="status" role="status"></p>
+</div>
+<p class="note">Elige tu sobre, copia tu premio y envíaselo a Roxxie por Telegram. No se envía automáticamente. 💕</p>
+</div><p class="footer">Un juego de Roxxie Doll ♡ Sin registro, cookies, analítica ni recopilación de datos personales.<br>Los precios son promocionales y están sujetos a confirmación directa con Roxxie.</p></main>
+<script nonce="roxxieScript2026">
+(()=>{'use strict';const prizes=[{price:599,code:'ROXXIE-ROSA',label:'Un descuentito solo para ti 💕'},{price:629,code:'ROXXIE-MOÑO',label:'Tu sobre trae una sorpresa especial 🎀'},{price:649,code:'ROXXIE-CORAZON',label:'¡Te tocó un precio secreto! 💌'}];let picked=false;let message='';const buttons=[...document.querySelectorAll('[data-envelope]')];const result=document.getElementById('result');const price=document.getElementById('price');const description=document.getElementById('promoDescription');const status=document.getElementById('status');function randomIndex(n){if(window.crypto&&crypto.getRandomValues){const a=new Uint32Array(1);const limit=Math.floor(4294967296/n)*n;do{crypto.getRandomValues(a)}while(a[0]>=limit);return a[0]%n}return Math.floor(Math.random()*n)}buttons.forEach(button=>button.addEventListener('click',()=>{if(picked)return;picked=true;const prize=prizes[randomIndex(prizes.length)];price.textContent='$'+prize.price+' MXN';description.textContent=prize.label;message='Hola, Roxxie 🎀 Abrí mi sobre en ROXXIE\'S MYSTERY BOX y me salió el premio '+prize.code+': $'+prize.price+' MXN por el acceso a DIARIO DE ROXXIE. ¿Me confirmas si puedo aprovecharlo? 💗';buttons.forEach(b=>{b.disabled=true});button.style.opacity='1';result.classList.add('show');result.scrollIntoView({behavior:'smooth',block:'nearest'});}));document.getElementById('copy').addEventListener('click',async()=>{try{if(!navigator.clipboard||!navigator.clipboard.writeText)throw Error('unsupported');await navigator.clipboard.writeText(message);status.textContent='¡Copiado! Ahora abre Telegram y pega tu premio 💖'}catch(e){status.textContent='Tu navegador no pudo copiarlo. Puedes mantener pulsado este texto para copiarlo:';const p=document.createElement('p');p.textContent=message;status.replaceChildren(document.createTextNode(status.textContent),p)}})})();
+</script>
+</body>
+</html>
